@@ -10,7 +10,7 @@ phone:
 
 department: 
 
-institution: Institute of Cyberspace Research (ICSR), Zhejiang University (ZJU)
+institution: Department of Computer Science, Zhejiang University
 
 mailing_address: 
 
@@ -27,7 +27,7 @@ profiles:
 intro:
   title: Hello!
   body: >
-    I'm a MPhil student in the [Institute of Cyberspace Research (ICSR)](https://icsr.zju.edu.cn/icsren/main.htm) at Zhejiang University. I'm working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
+    I'm a MPhil student in the Department of Computer Science, Zhejiang University. I'm working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
     Recently, I'm digging in Apple-silicon-based system (iOS/macOS).
 
 
