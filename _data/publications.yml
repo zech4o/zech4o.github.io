@@ -1,6 +1,6 @@
 -
   type: conference
-  title: "Demystifying Pointer Authentication on Apple M1 (to appear)"
+  title: "Demystifying Pointer Authentication on Apple M1"
   authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, Kui Ren
   conference: USENIX Security Symposium. 2023.
   year: 2023
