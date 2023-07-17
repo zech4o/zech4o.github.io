@@ -6,7 +6,7 @@
   year: 2023
   # pages: 405-414
   # pdf: http://ianli.com/publications/2011-ianli-ubicomp-understanding-my-data.pdf
-  # url: http://dl.acm.org/citation.cfm?id=2030166
+  url: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
 -
   type: conference
   title: "Apple PAC, Four Years Later: Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1"
