@@ -3,7 +3,7 @@
   title: "Demystifying Pointer Authentication on Apple M1"
   authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, Kui Ren
   conference: USENIX Security Symposium. 2023.
-  year: 2023
+#  year: 2023
   pages: 2833-2848
   pdf: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
   url: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
@@ -12,7 +12,7 @@
   title: "Apple PAC, Four Years Later: Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1"
   authors: Zechao Cai, Jiaxun Zhu, Yutian Yang, Wenbo Shen, Yu Wang
   conference: Black Hat USA. 2023.
-  year: 2023
+#  year: 2023
   #  pages: 405-414
   pdf: https://www.blackhat.com/us-23/briefings/schedule/index.html#apple-pac-four-years-later-reverse-engineering-the-customized-pointer-authentication-hardware-implementation-on-apple-m-32824
   url: https://www.blackhat.com/us-23/briefings/schedule/index.html#apple-pac-four-years-later-reverse-engineering-the-customized-pointer-authentication-hardware-implementation-on-apple-m-32824
