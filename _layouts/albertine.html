@@ -167,6 +167,7 @@ It is threatened by habitat loss.
     </div>
   </div>
   {% endif %}
+  
 
   {% if site.data.projects.size > 0 %}
   <!-- ==================== -->
@@ -218,36 +219,45 @@ It is threatened by habitat loss.
   <!-- ==================== -->
   <!-- PRESENTATIONS -->
   <!-- ==================== -->
-  <section class="container">
+  <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        <h3>Presentations</h3>
-      </div>
-    </div>
+      <section class="col-md-9">
+        <h3>Talks</h3>
 
-    {% for presentation in site.data.presentations %}
-      <div class="row">
-        <div class="col-md-9">
+        {% for presentation in site.data.presentations %}
           <p>
             <b>
-              {% if presentation.slides_url %}
-                <a href="{{ presentation.slides_url }}">
-                  {{ presentation.title }}
-                </a>
-              {% else %}
+              <a href="{{ presentation.pdf }}">
                 {{ presentation.title }}
-              {% endif %}
+              </a>
             </b>
             <small>
-              {{ presentation.date }}
+              {{ presentation.year }}
             </small>
             <br>
-            {{ presentation.location }}
+            {{ presentation.authors }}
+            <br>
+            {% case presentation.type %}
+              {% when 'conference' %}
+                {{ presentation.conference }}
+              {% when 'dissertation' %}
+                {{ presentation.publisher }}
+              {% when 'journal' %}
+                {{ presentation.journal }},
+                {{ presentation.volume }},
+                {{ presentation.issue }},
+                {{ presentation.pages }}
+              {% when 'magazine' %}
+                {{ presentation.magazine }},
+                {{ presentation.volume }},
+                {{ presentation.issue }},
+                {{ presentation.pages }}
+            {% endcase %}
           </p>
-        </div>
-      </div>
-    {% endfor %}
-  </section>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
   {% endif %}
 
   {% if site.data.ta.size > 0 %}
