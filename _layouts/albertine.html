@@ -260,41 +260,7 @@ It is threatened by habitat loss.
   </div>
   {% endif %}
 
-  {% if site.data.ta.size > 0 %}
-  <!-- ==================== -->
-  <!-- PRESENTATIONS -->
-  <!-- ==================== -->
-  <section class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <h3>Teaching</h3>
-      </div>
-    </div>
-
-    {% for presentation in site.data.presentations %}
-      <div class="row">
-        <div class="col-md-9">
-          <p>
-            <b>
-              {% if presentation.slides_url %}
-                <a href="{{ presentation.slides_url }}">
-                  {{ presentation.title }}
-                </a>
-              {% else %}
-                {{ presentation.title }}
-              {% endif %}
-            </b>
-            <small>
-              {{ presentation.date }}
-            </small>
-            <br>
-            {{ presentation.location }}
-          </p>
-        </div>
-      </div>
-    {% endfor %}
-  </section>
-  {% endif %}
+  
 
   <!-- ==================== -->
   <!-- FOOTER -->
