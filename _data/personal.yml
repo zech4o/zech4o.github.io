@@ -27,7 +27,7 @@ profiles:
 intro:
   title: Hello!
   body: >
-    Fake: I'm an MPhil student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
+    I'm an MPhil student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
     True: Someone hoping to have fun in sys/arch/music.
 
 
