@@ -27,13 +27,13 @@ profiles:
 intro:
   title: Hello!
   body: >
-    I'm an MPhil student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
-    Recently, I'm digging in Apple-silicon-based system (iOS/macOS).
+    Fake: I'm an MPhil student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
+    True: Someone hoping to have fun in sys/arch/music.
 
 
-    Now I'm looking for a PhD position (or an internship), and I expect to graduate in Fall 2023. Feel free to reach out to me.
+    Now I'm looking for a PhD position (or any collaboration/internship) and expect to graduate in Fall 2023. Feel free to reach out.
 
 
-    Interests: Music (Record collecting). Food (Chaoshan/Hunan/... cuisine). Travel (Music-related Activity, Nature).
+    Interests: Music (Electronica/Classical/Vinyl Collecting). Food. Travel (Music/Art-related Activity, Nature).
     
 
