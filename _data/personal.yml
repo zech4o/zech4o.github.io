@@ -27,7 +27,7 @@ profiles:
 intro:
   title: Hello!
   body: >
-    I'm an MPhil student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
+    I'm an MSc student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
 
 
     Now I'm applying for a Fall '24 PhD position. Feel free to reach out.
