@@ -8,7 +8,7 @@ body {
   font-family:'Roboto', 'Arial', sans-serif;
   font-size:16px;
   padding-top:176px;
-  background-color:#607274;
+  background-color:#ECF4D6;
 }
 
 /*******************
@@ -21,7 +21,7 @@ header {
   left:0;
   right:0;
   padding:32px 0;
-  background-color:#607274;
+  background-color:#ECF4D6;
 }
   header h1 {
     margin:0;
@@ -52,7 +52,7 @@ section {
     line-height:40px;
     font-weight:bold;
     font-size:32px;
-    color:#FAEED1; 
+    color:#265073; 
   }
   section .lead {
     font-size:24px;
@@ -65,7 +65,7 @@ section {
   }
   section a,
   section a:hover {
-    color:#FAEED1;
+    color:#265073;
   }
 
 /*******************
@@ -73,17 +73,17 @@ section {
  *******************/
 .intro-screen,
 .intro-screen header {
-  background-color:#FAEED1;
-  color:#607274;
+  background-color:#265073;
+  color:#ECF4D6;
 }
   .intro-screen h1,
   .intro-screen h2,
   .intro-screen h3 {
-    color:#607274;
+    color:#ECF4D6;
   }
   .intro-screen a,
   .intro-screen a:hover {
-    color:#FAEED1;
+    color:#265073;
   }
 
 /*******************
