@@ -25,14 +25,10 @@ profiles:
     url: https://github.com/zech4o
 
 intro:
-  title: Hello!
+  title:
   body: >
-    I'm an MSc student in the Department of Computer Science, Zhejiang University, working with Prof. [Wenbo Shen](https://wenboshen.org/). My research interests include operating system design and security, with a focus on hardware-software collaboration for security and performance.
-
-
-    Now I'm applying for a Fall '24 PhD position. Feel free to reach out.
-
-
-    Interests: Music (Electronica/Classical/Vinyl Collecting). Food. Travel (Music/Art-related Activity, Nature).
+    Zechao Cai earned his MSc. in Computer Science from Zhejiang University in 2023. In terms of research, he is passionate about exploring Operating Systems, System Security, and Computer Architecture to build fundamentally secure and efficient systems.
     
+    He is excited about the science and art of designing, composing, and interconnecting software/hardware components and interfaces to create systems to meet goals like functionality, performance, and security.
 
+    In addition, he has a strong passion for music, particularly Impressionism (Debussy and Ravel) and Electronica. He harbors aspirations of becoming a musician in the future.
