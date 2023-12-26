@@ -215,7 +215,45 @@ It is threatened by habitat loss.
   </section>
   {% endif %}
 
+  {% if site.data.presentations.size > 0 %}
+  <div class="container">
+    <div class="row">
+      <section class="col-md-9">
+        <h3>Presentations</h3>
 
+        {% for presentation in site.data.presentations %}
+          <p>
+            <b>
+              <!-- <a href="{{ presentation.pdf }}"> -->
+                {{ presentation.title }}
+              <!-- </a> -->
+            </b>
+            
+            <br>
+            {{ presentation.location}}
+            <br>
+            {% case presentation.type %}
+              {% when 'conference' %}
+                {{ presentation.conference }}
+              {% when 'dissertation' %}
+                {{ presentation.publisher }}
+              {% when 'journal' %}
+                {{ presentation.journal }},
+                {{ presentation.volume }},
+                {{ presentation.issue }},
+                {{ presentation.pages }}
+              {% when 'magazine' %}
+                {{ presentation.magazine }},
+                {{ presentation.volume }},
+                {{ presentation.issue }},
+                {{ presentation.pages }}
+            {% endcase %}
+          </p>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+  {% endif %}
   
 
   <!-- ==================== -->

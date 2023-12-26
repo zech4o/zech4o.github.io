@@ -1,13 +1,20 @@
-#   title: Integrating Visualizations with Innertube
-#   location: Quantified Self 2011 Amsterdam
-#   date: November 2011
-#   slides_url: http://www.slideshare.net/ianli/integrating-visualizations-with-innertube-quantified-self-2011-amsterdam
+- 
+  title: Introduction of Apple's hardware-assisted OS protection (Invited on-site talk).
+  location: Network and Information Security Lab @ Tsinghua University. Schedueled in Jan 2024.
+  date: Jan 2024 (on-site)
+  slides_url: http://www.slideshare.net/ianli/integrating-visualizations-with-innertube-quantified-self-2011-amsterdam
 
-# -
-#   title: 3 Design Considerations for Personal Informatics Tools
-#   location: Quantified Self 2011 Amsterdam
-#   date: November 2011
-#   slides_url: http://www.slideshare.net/ianli/3-design-considerations-for-personal-informatics-tools
+-
+  title: Demystifying Pointer Authentication on Apple M1 (Online talk)
+  location: USENIX Security '23. Aug 2023.
+  date: November 2011
+  slides_url: http://www.slideshare.net/ianli/integrating-visualizations-with-innertube-quantified-self-2011-amsterdam
+
+-
+  title: "Apple PAC, Four Years Later: Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1 (Online talk)"
+  location: Black Hat USA 2023. Aug 2023.
+  date: November 2011
+  slides_url: http://www.slideshare.net/ianli/3-design-considerations-for-personal-informatics-tools
 # -
 #   title: "Understanding My Data, Myself: Supporting Self-Reflection with Ubicomp Technologies"
 #   location: Ubicomp 2011, Beijing China

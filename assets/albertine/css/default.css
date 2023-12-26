@@ -7,8 +7,9 @@ body {
           box-sizing:border-box;
   font-family:'Roboto', 'Arial', sans-serif;
   font-size:16px;
-  padding-top:150px;
-  background-color:#F1F6F9;
+  padding-top:100px;
+  background-color:#4F6F52;
+  color: #ECE3CE;
 }
 
 /*******************
@@ -21,7 +22,7 @@ header {
   left:0;
   right:0;
   padding:32px 0;
-  background-color:#F1F6F9;
+  background-color:#4F6F52;
 }
   header h1 {
     margin:0;
@@ -45,14 +46,14 @@ footer {
  * SECTION
  *******************/
 section {
-  padding:48px 0;
+  padding:40px 0;
 }
   section h3 {
     padding:0 0 8px;
     line-height:40px;
     font-weight:bold;
     font-size:32px;
-    color:#212A3E; 
+    color:#ECE3CE; 
   }
   section .lead {
     font-size:24px;
@@ -61,11 +62,12 @@ section {
     margin-bottom:1em;
   }
   section p small {
+    color:#3A4D39;
     opacity:0.5;
   }
   section a,
   section a:hover {
-    color:#394867;
+    color:#ECE3CE;
   }
 
 /*******************
@@ -73,17 +75,17 @@ section {
  *******************/
 .intro-screen,
 .intro-screen header {
-  background-color:#394867;
-  color:#F1F6F9;
+  background-color:#ECE3CE;
+  color:#3A4D39;
 }
   .intro-screen h1,
   .intro-screen h2,
   .intro-screen h3 {
-    color:#F1F6F9;
+    color:#3A4D39;
   }
   .intro-screen a,
   .intro-screen a:hover {
-    color:#9BA4B5;
+    color:#3A4D39;
   }
 
 /*******************
