@@ -8,8 +8,8 @@ body {
   font-family:'Roboto', 'Arial', sans-serif;
   font-size:16px;
   padding-top:100px;
-  background-color:#4F6F52;
-  color: #ECE3CE;
+  background-color:#F1F6F9;
+  /* color: #ECE3CE; */
 }
 
 /*******************
@@ -22,7 +22,7 @@ header {
   left:0;
   right:0;
   padding:32px 0;
-  background-color:#4F6F52;
+  background-color:#F1F6F9;
 }
   header h1 {
     margin:0;
@@ -53,7 +53,7 @@ section {
     line-height:40px;
     font-weight:bold;
     font-size:32px;
-    color:#ECE3CE; 
+    color:#394867; 
   }
   section .lead {
     font-size:24px;
@@ -62,12 +62,12 @@ section {
     margin-bottom:1em;
   }
   section p small {
-    color:#3A4D39;
+    /* color:#394867; */
     opacity:0.5;
   }
   section a,
   section a:hover {
-    color:#ECE3CE;
+    color:#394867;
   }
 
 /*******************
@@ -75,17 +75,17 @@ section {
  *******************/
 .intro-screen,
 .intro-screen header {
-  background-color:#ECE3CE;
-  color:#3A4D39;
+  background-color:#394867;
+  color:#F1F6F9;
 }
   .intro-screen h1,
   .intro-screen h2,
   .intro-screen h3 {
-    color:#3A4D39;
+    color:#F1F6F9;
   }
   .intro-screen a,
   .intro-screen a:hover {
-    color:#3A4D39;
+    color:#F1F6F9;
   }
 
 /*******************
