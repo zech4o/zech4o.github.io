@@ -1,7 +1,7 @@
 -
   type: conference
   title: "Demystifying Pointer Authentication on Apple M1 🔗"
-  authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, Kui Ren
+  authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, and Kui Ren
   conference: USENIX Security Symposium. 2023.
 #  year: 2023
   pages: 2833-2848
@@ -10,7 +10,7 @@
 -
   type: conference
   title: "Apple PAC, Four Years Later: Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1 🔗"
-  authors: Zechao Cai, Jiaxun Zhu, Yutian Yang, Wenbo Shen, Yu Wang
+  authors: Zechao Cai, Jiaxun Zhu, Yutian Yang, Wenbo Shen, and Yu Wang
   conference: Black Hat USA. 2023.
 #  year: 2023
   #  pages: 405-414
