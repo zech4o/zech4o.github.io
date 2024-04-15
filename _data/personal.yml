@@ -23,11 +23,15 @@ profiles:
     network: Github
     username: zech4o
     url: https://github.com/zech4o
+  - 
+    network: Linkedin
+    username: Zechao Cai
+    url: https://www.linkedin.com/in/zechao-cai-647a75251
 
 intro:
   title:
   body: >
-    Zechao Cai earned his MSc. in Computer Science from Zhejiang University in 2023. He is dedicated to exploring Operating Systems, System Security, and Computer Architecture to build fundamentally secure and efficient systems.
+    Zechao Cai is an incoming Ph.D. student at the Department of Computer Science, Columbia University. Before that, he earned his MSc in Computer Science from Zhejiang University in 2023 and his BE from Guangdong University of Foreign Studies in 2020. He is dedicated to exploring Operating Systems, System Security, and Computer Architecture to build fundamentally secure and efficient systems.
     
 
     He is enthusiastic about the science and art of designing, developing, and interconnecting software/hardware components to create systems that fulfill diverse goals. This motivation propels him to apply for a Ph.D. program to further enhance his skills in creating innovative solutions.
