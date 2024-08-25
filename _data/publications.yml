@@ -2,7 +2,7 @@
   type: conference
   title: "CrossFire: Fuzzing macOS Cross-XPU Memory on Apple Silicon 🔗"
   authors: Jiaxun Zhu, Minghao Lin, Tingting Yin, Zechao Cai, Yu Wang, Rui Chang, and Wenbo Shen
-  conference: Computer and Communications Security (CCS) 2024.
+  conference: Computer and Communications Security (CCS). 2024.
 #  year: 2023
 #  pages: 2833-2848
   pdf: https://zechao.org 
