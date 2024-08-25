@@ -1,5 +1,15 @@
 -
   type: conference
+  title: "CrossFire: Fuzzing macOS Cross-XPU Memory on Apple Silicon 🔗"
+  authors: Jiaxun Zhu, Minghao Lin, Tingting Yin, Zechao Cai, Yu Wang, Rui Chang, and Wenbo Shen
+  conference: Computer and Communications Security (CCS) 2024.
+#  year: 2023
+#  pages: 2833-2848
+  pdf: https://zechao.org 
+  url: https://zechao.org
+#  url: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
+-
+  type: conference
   title: "Demystifying Pointer Authentication on Apple M1 🔗"
   authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, and Kui Ren
   conference: USENIX Security Symposium. 2023.
