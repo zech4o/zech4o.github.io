@@ -1,10 +1,11 @@
-# -
-#   name: 'Apple-Silicon-based System Research'
-#   description: >
-#     We conducted various research on Apple M1 by constructing a hypervisor-based framework.
-#   image: /img/phd-thesis.png
-#   url: http://ianli.com/thesis/
-# -
+ -
+   name: 'Apple-Silicon-based System Research'
+   description: >
+    I created and led this research track at Zhejiang University. We built a hypervisor for Apple Silicon and did various interesting hacking (you can find our work on USENIX SEC, CCS, and Black Hat). Although I'd like to try something else during my PhD, I am still very interested in Apple Silicon stuff and open to colaboration, so if you are interested in doing ressearch 📑/hacking 😈 with us on Apple Silicon, we should talk 😉.
+   
+   image: /img/apple-silicon-sq.png
+   url: http://ianli.com/thesis/
+-
 #   name: Model of Personal Informatics Systems
 #   description: >
 #     This is a model of personal informatics systems that we hope would be valuable for research and development. 
