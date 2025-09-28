@@ -27,6 +27,17 @@ It is threatened by habitat loss.
 
   <title>{{ site.data.personal.name }}</title>
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXV6EMHMZ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SXV6EMHMZ9', {
+      anonymize_ip: true
+    });
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -266,6 +277,7 @@ It is threatened by habitat loss.
           <hr>
         </div>
       </div>
+      
       <!-- <div class="row"> -->
         <!-- <div class="col-xs-12">           -->
           <!-- <img src="{{ site.baseurl }}/img/elbowpatched-icon.svg" alt="Elbowpatched"
