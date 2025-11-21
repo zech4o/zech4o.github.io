@@ -1,0 +1,32 @@
+---
+layout: post
+title: Gossip Blog
+description: 我的杂念很多。我想尝试写下来。
+---
+
+<section class="blog-hero">
+  <p>{{ page.description }}</p>
+</section>
+
+{% assign gossip_posts = site.posts | where: "category", "gossip" %}
+{% if gossip_posts.size == 0 %}
+  <div class="blog-empty">
+    <p>No gossip posts yet. Stay tuned!</p>
+  </div>
+{% else %}
+  <div class="blog-cards">
+    {% for post in gossip_posts %}
+      <article class="blog-card">
+        <div class="blog-card-meta">
+          <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <h2>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <a class="link-arrow" href="{{ post.url | relative_url }}">Read more →</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
+

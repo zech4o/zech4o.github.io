@@ -1,0 +1,32 @@
+---
+layout: post
+title: Learning Blog
+description: I am stupid, trying to learn something new and write down here.
+---
+
+<section class="blog-hero">
+  <p>{{ page.description }}</p>
+</section>
+
+{% assign learning_posts = site.posts | where: "category", "learning" %}
+{% if learning_posts.size == 0 %}
+  <div class="blog-empty">
+    <p>No learning posts yet. Stay tuned!</p>
+  </div>
+{% else %}
+  <div class="blog-cards">
+    {% for post in learning_posts %}
+      <article class="blog-card">
+        <div class="blog-card-meta">
+          <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <h2>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <a class="link-arrow" href="{{ post.url | relative_url }}">Read more →</a>
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
+

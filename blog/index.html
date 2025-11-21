@@ -1,0 +1,35 @@
+---
+layout: post
+title: Blog
+description: Updates, notes, and ideas from Zechao.
+---
+
+<section class="blog-hero">
+  <p>{{ page.description }}</p>
+</section>
+
+{% if site.posts.size == 0 %}
+  <div class="blog-empty">
+    <p>No posts yet. Stay tuned for upcoming write-ups.</p>
+    <p class="hint">Create your first entry by adding a Markdown file to <code>_posts/</code>.</p>
+  </div>
+{% else %}
+  <div class="blog-cards">
+    {% for post in site.posts %}
+      <article class="blog-card">
+        <div class="blog-card-meta">
+          <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <h2>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <a class="link-arrow" href="{{ post.url | relative_url }}">Read more →</a>
+      </article>
+      {% unless forloop.last %}
+        <div class="blog-card-divider"></div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+{% endif %}
+

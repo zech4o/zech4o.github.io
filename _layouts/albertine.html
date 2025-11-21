@@ -28,7 +28,7 @@ It is threatened by habitat loss.
   <title>{{ site.data.personal.name }}</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Nunito:600,700">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/albertine/css/default.css">
@@ -64,6 +64,14 @@ It is threatened by habitat loss.
           <img src="{{ site.baseurl }}{{ site.data.personal.picture }}" 
                class="img-circle"
                style="margin-top:-6px;width:56px;border:2px solid rgba(255,255,255,0.75)">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav class="site-nav">
+            <a href="{{ site.baseurl }}/#section-about">Home</a>
+            <a href="{{ site.baseurl }}/#section-blog">Blog</a>
+          </nav>
         </div>
       </div>
     </div>
@@ -255,6 +263,35 @@ It is threatened by habitat loss.
   </div>
   {% endif %}
   
+
+  <!-- ==================== -->
+  <!-- BLOG -->
+  <!-- ==================== -->
+  <section class="container" id="section-blog">
+    <div class="row">
+      <div class="col-md-9">
+        <h3>Blog</h3>
+        {% assign learning_posts = site.posts | where: "category", "learning" %}
+        {% assign gossip_posts = site.posts | where: "category", "gossip" %}
+        {% if learning_posts.size == 0 and gossip_posts.size == 0 %}
+          <p>No posts yet. Stay tuned for updates.</p>
+        {% else %}
+          <div class="blog-category-buttons">
+            <a class="category-button" href="{{ '/blog/learning/' | relative_url }}">
+              Learning Blogs
+            </a>
+            <a class="category-button" href="{{ '/blog/gossip/' | relative_url }}">
+              Gossip / 闲聊 Blogs
+            </a>
+          </div>
+          <p style="margin-top:24px">
+            <a class="link-arrow" href="{{ site.baseurl }}/blog/">Check All Blogs / 查看所有文章 →</a>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
 
   <!-- ==================== -->
   <!-- FOOTER -->

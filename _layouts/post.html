@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · {{ site.data.personal.name }}</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/albertine/css/default.css">
+</head>
+<body class="post-page">
+  <header class="post-header">
+    <div class="container">
+      <a class="brand" href="{{ site.baseurl }}/">{{ site.data.personal.name }}</a>
+      <nav class="post-nav">
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container post-content">
+    <article class="col-md-9">
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+      <p class="post-view-count">
+        <span id="view-count" data-view-path="{{ page.url }}">Views: --</span>
+      </p>
+      <div class="post-body">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% if site.goatcounter_domain %}
+    <script data-goatcounter="https://{{ site.goatcounter_domain }}/count" async src="https://gc.zgo.at/count.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var counterEl = document.getElementById('view-count');
+        if (!counterEl) return;
+        var path = counterEl.getAttribute('data-view-path');
+        if (!path) return;
+        fetch('https://{{ site.goatcounter_domain }}/api/v0/stats/page?format=json&name=' + encodeURIComponent(path))
+          .then(function (response) {
+            if (!response.ok) throw new Error('Failed to load view count');
+            return response.json();
+          })
+          .then(function (data) {
+            var count = 0;
+            if (data && data.pageviews && data.pageviews.length > 0) {
+              count = data.pageviews[0].count || 0;
+            }
+            counterEl.textContent = 'Views: ' + count;
+          })
+          .catch(function (error) {
+            console.warn('View count error:', error);
+          });
+      });
+    </script>
+  {% endif %}
+</body>
+</html>
+

@@ -3,3 +3,10 @@ markdown: kramdown
 
 # http://jekyllrb.com/docs/github-pages/#project-page-url-structure
 #baseurl: /
+
+exclude:
+  - serve
+  - vendor
+
+# Third-party analytics
+goatcounter_domain: zechao.goatcounter.com
