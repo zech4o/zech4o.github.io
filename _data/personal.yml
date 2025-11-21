@@ -31,4 +31,4 @@ profiles:
 intro:
   title:
   body: >
-   Zechao Cai is a PhD student at the Department of Computer Science, ETH Zurich, supervised by Prof. Adrian Perrig. He is also working closely with Prof. Huayi Duan. He enjoys digging into New and Messy Computer Systems, which nowadays are filled with too many cool and crazy ideas. They are working well, but a lof ot designs are far away from being elegant because of the lack of design principles. Therefore, he is very interested in rethinking and redesigning these systems from scratch.
+   Zechao Cai is a PhD student at the Department of Computer Science, ETH Zurich, supervised by Prof. Adrian Perrig. He is also working closely with Prof. Huayi Duan. He enjoys digging into New and Messy Computer Systems, which nowadays are filled with too many cool and crazy ideas. They are working well, but a lof ot designs are far away from being elegant because of the lack of design principles. So, he is very interested in how to rethink and redesign these systems from scratch.
