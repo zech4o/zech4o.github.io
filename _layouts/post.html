@@ -50,23 +50,52 @@
       document.addEventListener('DOMContentLoaded', function () {
         var counterEl = document.getElementById('view-count');
         if (!counterEl) return;
-        var path = counterEl.getAttribute('data-view-path');
-        if (!path) return;
-        fetch('https://{{ site.goatcounter_domain }}/api/v0/stats/page?format=json&name=' + encodeURIComponent(path))
-          .then(function (response) {
-            if (!response.ok) throw new Error('Failed to load view count');
-            return response.json();
-          })
-          .then(function (data) {
-            var count = 0;
-            if (data && data.pageviews && data.pageviews.length > 0) {
-              count = data.pageviews[0].count || 0;
+
+        function updateCounter(path) {
+          if (!path) return;
+          fetch('https://{{ site.goatcounter_domain }}/counter/' + encodeURIComponent(path) + '.json')
+            .then(function (response) {
+              if (!response.ok) throw new Error('Failed to load view count');
+              return response.json();
+            })
+            .then(function (data) {
+              var count = 0;
+              if (data && typeof data.count !== 'undefined') {
+                count = data.count;
+              }
+              counterEl.textContent = 'Views: ' + count;
+            })
+            .catch(function (error) {
+              console.warn('View count error:', error);
+            });
+        }
+
+        function initCounter() {
+          var path = counterEl.getAttribute('data-view-path');
+          if (!path && window.goatcounter && typeof window.goatcounter.get_data === 'function') {
+            var data = window.goatcounter.get_data();
+            path = data && data.p;
+          }
+          if (!path) {
+            path = window.location.pathname;
+          }
+          updateCounter(path);
+        }
+
+        if (window.goatcounter && typeof window.goatcounter.get_data === 'function') {
+          initCounter();
+        } else {
+          var attempts = 0;
+          var timer = setInterval(function () {
+            attempts += 1;
+            if (window.goatcounter && typeof window.goatcounter.get_data === 'function') {
+              clearInterval(timer);
+              initCounter();
+            } else if (attempts > 50) {
+              clearInterval(timer);
             }
-            counterEl.textContent = 'Views: ' + count;
-          })
-          .catch(function (error) {
-            console.warn('View count error:', error);
-          });
+          }, 100);
+        }
       });
     </script>
   {% endif %}
