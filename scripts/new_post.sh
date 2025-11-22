@@ -9,15 +9,17 @@ mkdir -p "$POSTS_DIR"
 usage() {
   cat <<'EOF'
 Usage:
-  scripts/new_post.sh ["-c learning|gossip"] "Post Title" [slug]
+  scripts/new_post.sh ["-c learning|gossip"] ["-s mainline|sideline"] "Post Title" [slug]
 
 Creates a new Jekyll post in _posts/ with today's date. The slug is derived
 from the title when omitted. Refuses to overwrite existing posts. Use -c or
 --category to choose between learning and gossip categories (default: learning).
+Use -s or --subcategory to choose between mainline and sideline for gossip posts.
 EOF
 }
 
 category=""
+subcategory=""
 positional=()
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -28,6 +30,15 @@ while [[ $# -gt 0 ]]; do
         exit 1
       fi
       category="$2"
+      shift 2
+      ;;
+    -s|--subcategory)
+      if [[ $# -lt 2 ]]; then
+        echo "Error: --subcategory requires a value." >&2
+        usage
+        exit 1
+      fi
+      subcategory="$2"
       shift 2
       ;;
     -h|--help)
@@ -72,6 +83,18 @@ if [[ "$category" != "learning" && "$category" != "gossip" ]]; then
   exit 1
 fi
 
+if [[ -n "$subcategory" ]]; then
+  if [[ "$category" != "gossip" ]]; then
+    echo "Error: subcategory can only be used with 'gossip' category." >&2
+    exit 1
+  fi
+  subcategory="$(echo "$subcategory" | tr '[:upper:]' '[:lower:]')"
+  if [[ "$subcategory" != "mainline" && "$subcategory" != "sideline" ]]; then
+    echo "Error: subcategory must be 'mainline' or 'sideline'." >&2
+    exit 1
+  fi
+fi
+
 if [[ -z "$slug" ]]; then
   # Normalize title into a URL-friendly slug
   slug="$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')"
@@ -91,6 +114,19 @@ if [[ -e "$filepath" ]]; then
   exit 1
 fi
 
+if [[ -n "$subcategory" ]]; then
+cat <<EOF >"$filepath"
+---
+layout: post
+title: "$title"
+date: ${date_prefix} ${time_suffix}
+category: ${category}
+subcategory: ${subcategory}
+---
+
+Write your content here.
+EOF
+else
 cat <<EOF >"$filepath"
 ---
 layout: post
@@ -101,6 +137,7 @@ category: ${category}
 
 Write your content here.
 EOF
+fi
 
 echo "Created $filepath"
 
