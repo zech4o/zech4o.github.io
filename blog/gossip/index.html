@@ -8,6 +8,88 @@ description: 杂念专家。
   <p>{{ page.description }}</p>
 </section>
 
+<!-- 动态 -->
+{% if site.data.gossip_status %}
+{% assign image_str = site.data.gossip_status.image | default: "" %}
+{% assign image_length = image_str | size %}
+{% if image_length > 0 %}
+  {% assign has_image = true %}
+{% else %}
+  {% assign has_image = false %}
+{% endif %}
+<div class="gossip-status" style="margin-bottom: 32px; padding: 24px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #394867; position: relative; min-height: 80px;">
+  <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #394867; padding-right: 100px;{% if has_image %} padding-bottom: 90px;{% endif %}">
+    {{ site.data.gossip_status.text }}
+  </p>
+  {% if has_image %}
+  <div style="position: absolute; bottom: 8px; left: 24px; margin-top: 16px;">
+    <img src="{{ site.data.gossip_status.image | relative_url }}" 
+         alt="Status image" 
+         class="gossip-status-image"
+         style="max-width: 120px; max-height: 80px; border-radius: 4px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s;">
+  </div>
+  {% endif %}
+  <span style="position: absolute; bottom: 8px; right: 24px; font-size: 12px; color: #7C8DA6; text-transform: uppercase; letter-spacing: 0.5px;">
+    {{ site.data.gossip_status.date | date: "%b %d, %Y" }}
+  </span>
+</div>
+
+<!-- 图片模态框 -->
+{% if has_image %}
+<div id="image-modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; cursor: pointer;">
+  <img src="{{ site.data.gossip_status.image | relative_url }}" 
+       alt="Status image" 
+       id="modal-image"
+       style="max-width: 80vw; max-height: 80vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain; cursor: pointer;">
+</div>
+
+<script>
+(function() {
+  var statusImage = document.querySelector('.gossip-status-image');
+  var modal = document.getElementById('image-modal');
+  var modalImage = document.getElementById('modal-image');
+  
+  if (statusImage && modal && modalImage) {
+    // 点击小图打开模态框
+    statusImage.addEventListener('click', function() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+    
+    // 点击模态框背景或图片关闭
+    modal.addEventListener('click', function(e) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+    
+    // 防止点击图片时事件冒泡（但允许关闭）
+    modalImage.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+    
+    // ESC键关闭
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // 鼠标悬停效果
+    statusImage.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    statusImage.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  }
+})();
+</script>
+{% endif %}
+{% endif %}
+
 {% assign gossip_posts = site.posts | where: "category", "gossip" %}
 {% assign mainline_posts = gossip_posts | where: "subcategory", "mainline" | sort: "date" | reverse %}
 {% assign sideline_posts = gossip_posts | where: "subcategory", "sideline" | sort: "date" | reverse %}
