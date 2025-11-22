@@ -9,8 +9,10 @@ description: 杂念专家。
 </section>
 
 {% assign gossip_posts = site.posts | where: "category", "gossip" %}
-{% assign mainline_posts = gossip_posts | where: "subcategory", "mainline" %}
-{% assign sideline_posts = gossip_posts | where: "subcategory", "sideline" %}
+{% assign mainline_posts = gossip_posts | where: "subcategory", "mainline" | sort: "date" | reverse %}
+{% assign sideline_posts = gossip_posts | where: "subcategory", "sideline" | sort: "date" | reverse %}
+{% assign latest_mainline = mainline_posts | first %}
+{% assign latest_sideline = sideline_posts | first %}
 
 {% if gossip_posts.size == 0 %}
   <div class="blog-empty">
@@ -26,24 +28,48 @@ description: 杂念专家。
     </a>
   </div>
 
-  <div class="blog-cards">
-    {% for post in gossip_posts %}
-      <article class="blog-card">
-        <div class="blog-card-meta">
-          <span>{{ post.date | date: "%b %d, %Y" }}</span>
-          {% if post.subcategory %}
-            <span style="margin-left: 12px; padding: 2px 8px; background: #f0f0f0; border-radius: 4px; font-size: 0.85em;">
-              {% if post.subcategory == "mainline" %}主线{% elsif post.subcategory == "sideline" %}支线{% endif %}
-            </span>
-          {% endif %}
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+    <!-- 主线最新文章 -->
+    <div>
+      <h3 style="margin-bottom: 16px; font-size: 1.2em; color: #394867;">主线最新</h3>
+      {% if latest_mainline %}
+        <article class="blog-card">
+          <div class="blog-card-meta">
+            <span>{{ latest_mainline.date | date: "%b %d, %Y" }}</span>
+          </div>
+          <h2>
+            <a href="{{ latest_mainline.url | relative_url }}">{{ latest_mainline.title }}</a>
+          </h2>
+          <p>{{ latest_mainline.excerpt | strip_html | truncate: 120 }}</p>
+          <a class="link-arrow" href="{{ latest_mainline.url | relative_url }}">Read more →</a>
+        </article>
+      {% else %}
+        <div class="blog-empty">
+          <p>No mainline posts yet.</p>
         </div>
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        <a class="link-arrow" href="{{ post.url | relative_url }}">Read more →</a>
-      </article>
-    {% endfor %}
+      {% endif %}
+    </div>
+
+    <!-- 支线最新文章 -->
+    <div>
+      <h3 style="margin-bottom: 16px; font-size: 1.2em; color: #394867;">支线最新</h3>
+      {% if latest_sideline %}
+        <article class="blog-card">
+          <div class="blog-card-meta">
+            <span>{{ latest_sideline.date | date: "%b %d, %Y" }}</span>
+          </div>
+          <h2>
+            <a href="{{ latest_sideline.url | relative_url }}">{{ latest_sideline.title }}</a>
+          </h2>
+          <p>{{ latest_sideline.excerpt | strip_html | truncate: 120 }}</p>
+          <a class="link-arrow" href="{{ latest_sideline.url | relative_url }}">Read more →</a>
+        </article>
+      {% else %}
+        <div class="blog-empty">
+          <p>No sideline posts yet.</p>
+        </div>
+      {% endif %}
+    </div>
   </div>
 {% endif %}
 

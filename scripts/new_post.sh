@@ -14,7 +14,9 @@ Usage:
 Creates a new Jekyll post in _posts/ with today's date. The slug is derived
 from the title when omitted. Refuses to overwrite existing posts. Use -c or
 --category to choose between learning and gossip categories (default: learning).
-Use -s or --subcategory to choose between mainline and sideline for gossip posts.
+For gossip posts, subcategory defaults to 'sideline'. Use -s or --subcategory
+to override (mainline or sideline). You can also manually edit the subcategory
+field in the generated markdown file.
 EOF
 }
 
@@ -83,6 +85,11 @@ if [[ "$category" != "learning" && "$category" != "gossip" ]]; then
   exit 1
 fi
 
+# For gossip posts, default to sideline if not specified
+if [[ "$category" == "gossip" && -z "$subcategory" ]]; then
+  subcategory="sideline"
+fi
+
 if [[ -n "$subcategory" ]]; then
   if [[ "$category" != "gossip" ]]; then
     echo "Error: subcategory can only be used with 'gossip' category." >&2
@@ -114,7 +121,8 @@ if [[ -e "$filepath" ]]; then
   exit 1
 fi
 
-if [[ -n "$subcategory" ]]; then
+# Always include subcategory for gossip posts (defaults to sideline)
+if [[ "$category" == "gossip" ]]; then
 cat <<EOF >"$filepath"
 ---
 layout: post
