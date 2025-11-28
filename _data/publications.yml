@@ -3,8 +3,8 @@
   title: "Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services 🔗"
   authors: Minghao Lin, Jiaxun Zhu, Tingting Yin, Zechao Cai, Guanxing Wen, Yanan Guo, and Mengyuan Li
   conference: Computer and Communications Security (CCS). 2025.
-  pdf: https://zechao.org
-  url: https://zechao.org
+  pdf: https://dl.acm.org/doi/10.1145/3719027.3765205
+  url: https://dl.acm.org/doi/10.1145/3719027.3765205
 -
   type: conference
   title: "CrossFire: Fuzzing macOS Cross-XPU Memory on Apple Silicon 🔗"
