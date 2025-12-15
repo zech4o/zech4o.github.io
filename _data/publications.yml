@@ -1,3 +1,21 @@
+- type: conference
+  title: "Under Submission."
+  authors: Zechao Cai, ..., ...,
+  conference: Under Submission.
+  pdf: https://zechao.org
+  url: https://zechao.org
+- type: conference
+  title: "Under Embargo"
+  authors: Liwen Xu, Zechao Cai, Huayi Duan, Adrian Perrig
+  conference: USENIX Security Symposium. 2026.
+  pdf: https://zechao.org
+  url: https://zechao.org
+- type: conference
+  title: "Resolve the Unresolved: Systematic Work Profiling for DNS Resolvers"
+  authors: Liwen Xu, Huayi Duan, Zechao Cai, Adrian Perrig
+  conference: Security and Privacy (S&P). 2026.
+  pdf: https://zechao.org
+  url: https://zechao.org
 -
   type: conference
   title: "Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services 🔗"
