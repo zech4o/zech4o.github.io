@@ -1,11 +1,5 @@
 - type: conference
-  title: "Under Submission."
-  authors: Zechao Cai, ..., ...,
-  conference: Under Submission.
-  pdf: https://zechao.org
-  url: https://zechao.org
-- type: conference
-  title: "Under Embargo"
+  title: "DaLens: Charting DNS Self-Amplification Threats at Large"
   authors: Liwen Xu, Zechao Cai, Huayi Duan, Adrian Perrig
   conference: USENIX Security Symposium. 2026.
   pdf: https://zechao.org
