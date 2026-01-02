@@ -1,4 +1,9 @@
 - type: conference
+  title: "Under Submission (OSDI 2026)."
+  authors: Zechao Cai, ...
+  conference:  
+  url: https://zechao.org
+- type: conference
   title: "DaLens: Charting DNS Self-Amplification Threats at Large"
   authors: Liwen Xu, Zechao Cai, Huayi Duan, Adrian Perrig
   conference: USENIX Security Symposium. 2026.
