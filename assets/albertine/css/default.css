@@ -255,11 +255,11 @@ header {
  * FIXED CONTACT
  *******************/
 #contact-fixed {
-  position: fixed;
-  top: 150px;
-  right: 230px;
-  width: 250px;
-  z-index: 50;
+  position: fixed !important;
+  top: 150px !important;
+  right: 230px !important;
+  width: 250px !important;
+  z-index: 50 !important;
   padding: 20px;
   background-color: rgba(241, 246, 249, 0.95);
   border-radius: 8px;
