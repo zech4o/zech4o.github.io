@@ -10,3 +10,6 @@ exclude:
 
 # Third-party analytics
 goatcounter_domain: zechao.goatcounter.com
+
+# Blog display toggle
+show_blog: false

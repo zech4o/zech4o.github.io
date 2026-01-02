@@ -57,6 +57,7 @@ section {
   }
   section .lead {
     font-size:22px;
+    margin-bottom: 0;
   }
   section p {
     margin-bottom:1em;
@@ -69,6 +70,23 @@ section {
   section a:hover {
     color:#394867;
   }
+
+/* Reduce spacing between intro and publications */
+#section-about {
+  margin-bottom: -60px;
+}
+#section-about section {
+  padding-bottom: 0;
+}
+#section-about .lead {
+  margin-bottom: 0;
+}
+#section-about + .container {
+  margin-top: -60px;
+}
+#section-about + .container section {
+  padding-top: 0;
+}
 
 /*******************
  * INTRO SCREEN
@@ -232,3 +250,57 @@ header {
   font-size:14px;
   margin-top:-4px;
 }
+
+/*******************
+ * FIXED CONTACT
+ *******************/
+#contact-fixed {
+  position: fixed;
+  top: 150px;
+  right: 230px;
+  width: 250px;
+  z-index: 50;
+  padding: 20px;
+  background-color: rgba(241, 246, 249, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color .5s, color .5s;
+     -moz-transition: background-color .5s, color .5s;
+          transition: background-color .5s, color .5s;
+}
+  #contact-fixed h3 {
+    padding: 0 0 8px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #394867;
+    margin-top: 0;
+    -webkit-transition: color .5s;
+       -moz-transition: color .5s;
+            transition: color .5s;
+  }
+  #contact-fixed p {
+    margin-bottom: 1em;
+  }
+  #contact-fixed p small {
+    opacity: 0.5;
+  }
+  #contact-fixed a,
+  #contact-fixed a:hover {
+    color: #394867;
+    -webkit-transition: color .5s;
+       -moz-transition: color .5s;
+            transition: color .5s;
+  }
+
+.intro-screen #contact-fixed {
+  background-color: rgba(57, 72, 103, 0.95);
+  color: #F1F6F9;
+}
+  .intro-screen #contact-fixed h3 {
+    color: #F1F6F9;
+  }
+  .intro-screen #contact-fixed a,
+  .intro-screen #contact-fixed a:hover {
+    color: #F1F6F9;
+  }

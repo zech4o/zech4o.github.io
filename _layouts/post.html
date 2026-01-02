@@ -16,7 +16,9 @@
       <a class="brand" href="{{ site.baseurl }}/">{{ site.data.personal.name }}</a>
       <nav class="post-nav">
         <a href="{{ site.baseurl }}/">Home</a>
+        {% if site.show_blog %}
         <a href="{{ site.baseurl }}/#section-blog">Blog</a>
+        {% endif %}
       </nav>
     </div>
   </header>
