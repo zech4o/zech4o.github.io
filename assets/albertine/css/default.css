@@ -48,6 +48,9 @@ footer {
 section {
   padding:40px 0;
 }
+section#contact-fixed {
+  padding: 20px !important;
+}
   section h3 {
     padding:0 0 8px;
     line-height:40px;
@@ -260,7 +263,8 @@ header {
   right: 230px !important;
   width: 250px !important;
   z-index: 50 !important;
-  padding: 20px;
+  padding: 20px !important;
+  margin: 0 !important;
   background-color: rgba(241, 246, 249, 0.95);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
