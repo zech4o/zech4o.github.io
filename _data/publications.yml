@@ -16,6 +16,12 @@
   conference: Security and Privacy (S&P). 2026.
   pdf: https://zechao.org
   url: https://zechao.org
+- type: conference
+  title: "M1Pecker: A Dynamic Analysis Framework for Pointer Authentication in Apple M1 Chips"
+  authors: Jiaxun Zhu, Zechao Cai, Wenbo Shen, Yutian Yang, Rui Chang
+  conference: IEEE Transactions on Dependable and Secure Computing (TDSC). 2026.
+  pdf: https://zechao.org
+  url: https://zechao.org
 -
   type: conference
   title: "Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services 🔗"
