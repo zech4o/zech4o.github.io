@@ -1,7 +1,8 @@
 - type: conference
-  title: "Under Submission (OSDI 2026)."
-  authors: Zechao Cai, ...
-  conference:  
+  title: "Resilient Internet Naming Service via Proactive Resource Scheduling"
+  authors: Zechao Cai, Liwen Xu, Huayi Duan, Jelte van Bommel, Francesco Da Dalt, Marc Wyss, Adrian Perrig
+  conference: Operating Systems Design and Implementation (OSDI). 2026 (Under review).
+  pdf: https://zechao.org
   url: https://zechao.org
 - type: conference
   title: "DaLens: Charting DNS Self-Amplification Threats at Large"
