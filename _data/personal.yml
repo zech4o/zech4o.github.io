@@ -1,6 +1,6 @@
 name: Zechao Cai
 
-label: Systems Researcher 
+label: Systems Researcher
 
 picture: /img/my_profile_pic.jpeg
 
@@ -31,4 +31,4 @@ profiles:
 intro:
   title:
   body: >
-   Zechao Cai is a PhD student at the Department of Computer Science, ETH Zurich. His research interests lie in computer systems in general.
+   Zechao Cai is a PhD candidate at the Department of Computer Science, ETH Zurich, supervised by Prof. Adrian Perrig. His current primary research interests are systems & networking for AI.
