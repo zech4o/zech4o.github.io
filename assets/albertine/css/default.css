@@ -260,7 +260,7 @@ header {
 #contact-fixed {
   position: fixed !important;
   top: 150px !important;
-  right: 230px !important;
+  right: 165px !important;
   width: 250px !important;
   z-index: 50 !important;
   padding: 20px !important;
@@ -308,3 +308,15 @@ header {
   .intro-screen #contact-fixed a:hover {
     color: #F1F6F9;
   }
+
+/* Phones / small tablets: drop fixed positioning so the box doesn’t cover text or overflow */
+@media (max-width: 991px) {
+  #contact-fixed {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 24px 15px 40px !important;
+  }
+}
