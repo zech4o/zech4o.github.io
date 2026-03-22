@@ -91,6 +91,22 @@ section#contact-fixed {
   padding-top: 0;
 }
 
+/* Negative margins tighten desktop layout; on narrow screens the intro is taller and overlaps Publications */
+@media (max-width: 991px) {
+  #section-about {
+    margin-bottom: 0;
+  }
+  #section-about + .container {
+    margin-top: 0;
+  }
+  #section-about section {
+    padding-bottom: 24px;
+  }
+  #section-about + .container section {
+    padding-top: 24px;
+  }
+}
+
 /*******************
  * INTRO SCREEN
  *******************/
@@ -309,14 +325,4 @@ header {
     color: #F1F6F9;
   }
 
-/* Phones / small tablets: drop fixed positioning so the box doesn’t cover text or overflow */
-@media (max-width: 991px) {
-  #contact-fixed {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: 24px 15px 40px !important;
-  }
-}
+/* Mobile Contact layout: duplicated inline in _layouts/albertine.html so GitHub Pages cannot serve stale rules via cached default.css. */

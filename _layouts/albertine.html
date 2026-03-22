@@ -31,7 +31,27 @@ It is threatened by habitat loss.
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Nunito:600,700">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/albertine/css/default.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/albertine/css/default.css?v={{ site.time | date: '%s' }}">
+  <!-- Inlined so GitHub Pages CDN cache on default.css cannot drop mobile Contact rules -->
+  <style>
+    @media screen and (max-width: 991px) {
+      #contact-fixed,
+      .intro-screen #contact-fixed,
+      section#contact-fixed {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        width: auto !important;
+        max-width: none !important;
+        margin: 24px 15px 40px !important;
+        z-index: auto !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+      }
+    }
+  </style>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
