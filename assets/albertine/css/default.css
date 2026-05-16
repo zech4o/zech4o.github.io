@@ -276,8 +276,8 @@ header {
 #contact-fixed {
   position: fixed !important;
   top: 150px !important;
-  right: 165px !important;
-  width: 250px !important;
+  right: 90px !important;
+  width: 210px !important;
   z-index: 50 !important;
   padding: 20px !important;
   margin: 0 !important;

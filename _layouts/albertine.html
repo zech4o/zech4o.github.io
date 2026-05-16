@@ -32,7 +32,7 @@ It is threatened by habitat loss.
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/albertine/css/default.css?v={{ site.time | date: '%s' }}">
-  <!-- Inlined so GitHub Pages CDN cache on default.css cannot drop mobile Contact rules -->
+  <!-- Inlined so GitHub Pages CDN cache on default.css cannot drop Contact rules -->
   <style>
     @media screen and (max-width: 991px) {
       #contact-fixed,
@@ -49,6 +49,14 @@ It is threatened by habitat loss.
         z-index: auto !important;
         -webkit-transform: none !important;
         transform: none !important;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      #contact-fixed,
+      .intro-screen #contact-fixed,
+      section#contact-fixed {
+        right: 90px !important;
+        width: 210px !important;
       }
     }
   </style>
@@ -81,9 +89,9 @@ It is threatened by habitat loss.
           </h2>
         </div>
         <div class="col-xs-3 col-lg-3">
-          <img src="{{ site.baseurl }}{{ site.data.personal.picture }}" 
+          <img src="{{ site.baseurl }}{{ site.data.personal.picture }}"
                class="img-circle"
-               style="margin-top:-6px;width:56px;border:2px solid rgba(255,255,255,0.75)">
+               style="margin-top:-6px;margin-left:100px;width:56px;border:2px solid rgba(255,255,255,0.75)">
         </div>
       </div>
       <div class="row">
@@ -252,7 +260,27 @@ It is threatened by habitat loss.
     </div>
   </div>
   {% endif %}
-  
+
+  {% if site.data.services.size > 0 %}
+  <div class="container">
+    <div class="row">
+      <section class="col-md-9">
+        <h3>Services</h3>
+
+        {% for service in site.data.services %}
+          <p>
+            <b>{{ service.name }}</b>
+            {% if service.description %}
+              <br>
+              {{ service.description }}
+            {% endif %}
+          </p>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+  {% endif %}
+
 
   <!-- ==================== -->
   <!-- CONTACT (Fixed) -->
