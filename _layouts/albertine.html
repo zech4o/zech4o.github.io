@@ -138,7 +138,44 @@ It is threatened by habitat loss.
       <section class="col-md-9">
         <h3>Publications</h3>
 
-        {% for publication in site.data.publications %}
+        {% assign apple_pubs = site.data.publications | where: "category", "apple" %}
+        {% assign dns_pubs = site.data.publications | where: "category", "dns" %}
+
+        <h4 style="font-weight: bold;">Apple Silicon stuff</h4>
+        {% for publication in apple_pubs %}
+          <p>
+            <b>
+              <a href="{{ publication.pdf }}">
+                {{ publication.title }}
+              </a>
+            </b>
+            <small>
+              {{ publication.year }}
+            </small>
+            <br>
+            {{ publication.authors }}
+            <br>
+            {% case publication.type %}
+              {% when 'conference' %}
+                {{ publication.conference }}
+              {% when 'dissertation' %}
+                {{ publication.publisher }}
+              {% when 'journal' %}
+                {{ publication.journal }},
+                {{ publication.volume }},
+                {{ publication.issue }},
+                {{ publication.pages }}
+              {% when 'magazine' %}
+                {{ publication.magazine }},
+                {{ publication.volume }},
+                {{ publication.issue }},
+                {{ publication.pages }}
+            {% endcase %}
+          </p>
+        {% endfor %}
+
+        <h4 style="font-weight: bold;">DNS stuff</h4>
+        {% for publication in dns_pubs %}
           <p>
             <b>
               <a href="{{ publication.pdf }}">

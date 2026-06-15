@@ -1,16 +1,5 @@
 - type: conference
-  title: "DaLens: Charting DNS Self-Amplification Threats at Large"
-  authors: Liwen Xu, Zechao Cai, Huayi Duan, Adrian Perrig
-  conference: USENIX Security Symposium. 2026.
-  pdf: https://zechao.org
-  url: https://zechao.org
-- type: conference
-  title: "Resolve the Unresolved: Systematic Work Profiling for DNS Resolvers"
-  authors: Liwen Xu, Huayi Duan, Zechao Cai, Adrian Perrig
-  conference: Security and Privacy (S&P). 2026.
-  pdf: https://zechao.org
-  url: https://zechao.org
-- type: conference
+  category: apple
   title: "M1Pecker: A Dynamic Analysis Framework for Pointer Authentication in Apple M1 Chips 🔗"
   authors: Jiaxun Zhu, Zechao Cai, Wenbo Shen, Yutian Yang, Rui Chang
   conference: IEEE Transactions on Dependable and Secure Computing (TDSC). 2026.
@@ -18,6 +7,7 @@
   url: https://ieeexplore.ieee.org/document/11248954
 -
   type: conference
+  category: apple
   title: "Chekhov’s Gun: Uncovering Hidden Risks in macOS Application-Sandboxed PID-Domain Services 🔗"
   authors: Minghao Lin, Jiaxun Zhu, Tingting Yin, Zechao Cai, Guanxing Wen, Yanan Guo, and Mengyuan Li
   conference: Computer and Communications Security (CCS). 2025.
@@ -25,16 +15,18 @@
   url: https://dl.acm.org/doi/10.1145/3719027.3765205
 -
   type: conference
+  category: apple
   title: "CrossFire: Fuzzing macOS Cross-XPU Memory on Apple Silicon 🔗"
   authors: Jiaxun Zhu, Minghao Lin, Tingting Yin, Zechao Cai, Yu Wang, Rui Chang, and Wenbo Shen
   conference: Computer and Communications Security (CCS). 2024.
 #  year: 2023
 #  pages: 2833-2848
-  pdf: https://dl.acm.org/doi/abs/10.1145/3658644.3690376 
+  pdf: https://dl.acm.org/doi/abs/10.1145/3658644.3690376
   url: https://dl.acm.org/doi/abs/10.1145/3658644.3690376
 #  url: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
 -
   type: conference
+  category: apple
   title: "Demystifying Pointer Authentication on Apple M1 🔗"
   authors: Zechao Cai, Jiaxun Zhu, Wenbo Shen, Yutian Yang, Rui Chang, Yu Wang, Jinku Li, and Kui Ren
   conference: USENIX Security Symposium. 2023.
@@ -44,6 +36,7 @@
   url: https://www.usenix.org/conference/usenixsecurity23/presentation/cai-zechao
 -
   type: conference
+  category: apple
   title: "Apple PAC, Four Years Later: Reverse Engineering the Customized Pointer Authentication Hardware Implementation on Apple M1 🔗"
   authors: Zechao Cai, Jiaxun Zhu, Yutian Yang, Wenbo Shen, and Yu Wang
   conference: Black Hat USA. 2023.
@@ -52,6 +45,22 @@
   pdf: https://www.blackhat.com/us-23/briefings/schedule/index.html#apple-pac-four-years-later-reverse-engineering-the-customized-pointer-authentication-hardware-implementation-on-apple-m-32824
   url: https://www.blackhat.com/us-23/briefings/schedule/index.html#apple-pac-four-years-later-reverse-engineering-the-customized-pointer-authentication-hardware-implementation-on-apple-m-32824
 -
+  type: conference
+  category: dns
+  title: "DaLens: Charting DNS Self-Amplification Threats at Large"
+  authors: Liwen Xu, Zechao Cai, Huayi Duan, Adrian Perrig
+  conference: USENIX Security Symposium. 2026.
+  pdf: https://zechao.org
+  url: https://zechao.org
+-
+  type: conference
+  category: dns
+  title: "Resolve the Unresolved: Systematic Work Profiling for DNS Resolvers"
+  authors: Liwen Xu, Huayi Duan, Zechao Cai, Adrian Perrig
+  conference: Security and Privacy (S&P). 2026.
+  pdf: https://zechao.org
+  url: https://zechao.org
+#-
 #  type: conference
 #  title: "..."
 #  authors: Zechao Cai...
