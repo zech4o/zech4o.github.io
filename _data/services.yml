@@ -1,6 +1,6 @@
 -
   name: Reviewer
-  description: IEEE Transactions on Dependable and Secure Computing (TDSC)
+  description: TDSC
 -
   name: External Reviewer
   description: NSDI 2026
